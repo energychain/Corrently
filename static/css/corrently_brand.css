@@ -1,0 +1,40 @@
+body {
+  background:#fafafa;
+}
+ header {
+   margin-bottom:20px;
+   border-bottom-width:1px;
+   border-bottom-style:solid;
+   border-bottom-color: #bd9926;
+   height:120px;
+ }
+ .card {
+   margin-bottom:15px;
+ }
+ th {
+     padding-top:5px;
+ }
+ .islive {
+   color:#990000;
+ }
+ strong {
+   color:#076633;
+ }
+ .second {
+   color:#bd9926;
+ }
+ .bg-success {
+
+ }
+ h1,h2 {
+   color:#076633;
+ }
+ main {
+   margin-top:60px;
+ }
+ footer {
+   margin-top:50px;
+ }
+.nav-link:hover {
+    text-decoration: underline;
+}
