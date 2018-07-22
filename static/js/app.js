@@ -11,6 +11,7 @@ $(document).ready(function() {
   }
 
 
+
 if (typeof web3 !== 'undefined') {
       var web3Provider = new ethers.providers.Web3Provider(web3.currentProvider,ethers.providers.getDefaultProvider("homestead"));
       web3Provider.getBalance("0xc430fAB09288C272A321C086d330609CD8b71447"). then(function(balance) {
