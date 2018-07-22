@@ -8,6 +8,10 @@ body {
    border-bottom-color: #bd9926;
    height:120px;
  }
+ .section {
+    padding-top:160px;
+    height:100%;
+ }
  .card {
    margin-bottom:15px;
  }
@@ -30,7 +34,7 @@ body {
    color:#076633;
  }
  main {
-   margin-top:60px;
+   
  }
  footer {
    margin-top:50px;

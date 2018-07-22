@@ -17,20 +17,32 @@
            <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarCollapse">
-
+            <ul class="navbar-nav mr-auto text-secondary">
+              <li class="nav-item"><a href="#about" class="nav-link text-secondary">About</a></li>
+              <li class="nav-item"><a href="#terms"  class="nav-link text-secondary">Terms</a></li>
+              <li class="nav-item"><a href="#process" class="nav-link text-secondary">Process</a></li>
+              <li class="nav-item"><a href="#assets" class="nav-link text-secondary">Assets</a></li>
          </div>
        </nav>
       </header>
     <main role="main">
     <div class="container">
-              <h1>Invest Token Info</h1>
-              <h2><a href="https://etherscan.io/token/0x725b190bc077ffde17cf549aa8ba25e298550b18" class="secondary">0x725b190bc077ffde17cf549aa8ba25e298550b18</a>
+            <div class="section" id="about">
+              <h1><strong>Corrently</strong> Invest Token Info</h1>
+              <h2><a href="https://etherscan.io/token/0x725b190bc077ffde17cf549aa8ba25e298550b18" class="second">0x725b190bc077ffde17cf549aa8ba25e298550b18</a>
               <hr/>
               <h2>About</h2>
               <p><a href="https://stromdao.de/">STROMDAO</a> developed an electricity tariff for Germany where customers receive loyalty points (=<strong>Corrently</strong>) per Kilo-Watt-Hour power consumption.</p>
               <p>Customers receive an option to exchange <strong>Corrently</strong> for a recuction of their future electricity bills. In order to achive those reductions profit sharing contracts with renewable energy operators exist.</p>
               <h2>Corrently - Invest Token</h2>
               <p>A ERC20 compliant token that bridges the gap between profit sharing contracts with operators and customers option.</p>
+              <table class="table">
+                <tr><th>Total Supply</th><td><span id="totalSupply"></span></td></tr>
+                <tr><th>IPFS Mirror</th><td><a href="https://ipfs.io/ipfs/QmYm7S1ZsS6RjBx2mwxaq9RMrj8GxRqPfnAYps2976LF7f/static/index.html">QmYm7S1ZsS6RjBx2mwxaq9RMrj8GxRqPfnAYps2976LF7f</a></td></tr>
+              </table>
+            </div>
+            <div  class="section" id="terms">
+              <h2>Terms and Conditions</h2>
               <h3>Terms of Issuing</h3>
               <p>New tokens get issued to legal contract owner as soon as a profit sharing contract exists.
                  By publishing those contracts STROMDAO ensures that issued tokens are backed with existing profit sharing agreements (=proof of existence of legal contracts).
@@ -47,7 +59,9 @@
                 <li>Customers could reduce their bills further by buying additional tokens from the market.</li>
                 <li>Operators (party that shares profit) could buy back obligations they sold.</li>
               </ul>
-              <h3>Sample Process Flow</h3>
+            </div>
+            <div class="section" id="process">
+              <h2>Process flow</h2>
               <p>(note: Corrently invest token has 2 decimals!)</p>
               <p>
                   <a href="https://etherscan.io/tx/0xabbd396e4e96517a63a834a3177f8b2809e1bd6682547f1d07bc5bf8073a99d3#decodetab">STROMDAO confirms profit share of a provider</a>
@@ -65,11 +79,36 @@
                     <li>STROMDAO ensures electricity bill of customer is reduced by 0,10€ each month</li>
                   </ol>
               </p>
-
+            </div>
+            <div  class="section" id="assets">
+              <h3>Assets</h3>
+              <table class="table">
+              <tr><th>Operator</th><th>Proof of Value</th><th>Tokens Issued</th></tr>
+              <tr>
+                <td><a href="https://etherscan.io/address/0x445c1e284c15a50a69fe7d6dcd9fba3b938b52bb#tokentxns">0x445c1e284c15a50a69fe7d6dcd9fba3b938b52bb</a></td>
+                <td><a href="./ipfs_root/Investmentvertrag-00220247.pdf">ipfs/QmYow7SDzuKTZYd4mG1tjucRcHhbZGcN8ESpdFQioiPhWn</a></td>
+                <td>2000</td>
+              </tr>
+            </table>
+            </div>
     </div> <!-- /container /app -->
   </main>
-  <script src="/static/js/jquery.js" crossorigin="anonymous"></script>
-  <script src="/static/js/popper.js" crossorigin="anonymous"></script>
-  <script src="/static/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="./js/jquery.js" crossorigin="anonymous"></script>
+  <script src="./js/popper.js" crossorigin="anonymous"></script>
+  <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="./js/app.js"></script>
+  <script>
+  function resizeContent(){
+    $('.section').height( $(window).height() )
+  }
+
+  $(document).ready(function() {
+      resizeContent();
+  });
+
+  $(window).resize(function() {
+      resizeContent();
+  });
+  </script>
   </body>
 </html>
