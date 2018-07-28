@@ -1,14 +1,16 @@
+html,body{height:100%;}
+
 body {
   background:#fafafa;
 }
- header {
-   margin-bottom:20px;
+.cheader {
    border-bottom-width:1px;
    border-bottom-style:solid;
    border-bottom-color: #bd9926;
-   height:120px;
+   height:95px;
  }
  .section {
+    margin-top:50px;
     padding-top:160px;
     height:100%;
  }
@@ -34,11 +36,15 @@ body {
    color:#076633;
  }
  main {
-   
+
  }
  footer {
    margin-top:50px;
  }
 .nav-link:hover {
     text-decoration: underline;
+    color:#076633;
+}
+.nav-link {
+  color:#303030;
 }
