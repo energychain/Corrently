@@ -266,6 +266,12 @@
   color: #fff;
 }
 
+@media print {
+  section {
+    page-break-before: always;
+  }
+}
+
 body {
   font-family: 'Nunito';
   letter-spacing: 0.0625em;
