@@ -514,7 +514,7 @@ For optimization tariff customers receive payouts from within a single, aggregat
                 </div>
               </div>
               <div class="spacer"style="height:25px;"></div>
-              <div id="directBuy" style="display:none">
+
                 <h2>Direct Buy/Sell</h2>
                 <div class="card-deck">
                   <div class="card">
@@ -523,17 +523,24 @@ For optimization tariff customers receive payouts from within a single, aggregat
                         <p class="card-text">per CORI</p>
                       </div>
                   </div>
-                  <div class="card">
-                      <div class="card-body">
-                        <label for="numCoris">Amount of shares</label>
-                        <input class="form-control" type="number" value="1" id="numCoris" name="numCoris"/>
-                        <p class="card-text">
-                            <button class="btn btn-success" id="buyCors" style="margin-top:5px;">buy for <span id="priceBuy">-</span> ETH</button>
-                        </p>
-                      </div>
+                      <div class="card">
+                          <div class="card-body">
+                            <label for="numCoris">Amount of shares</label>
+                            <input class="form-control" type="number" value="1" id="numCoris" name="numCoris"/>
+                              <div id="directBuy" style="display:none">
+                                    <p class="card-text">
+                                        <button class="btn btn-success" id="buyCors" style="margin-top:5px;">buy for <span class="priceBuy">-</span> ETH</button>
+                                    </p>
+                              </div>
+                              <p class="card-text" id="indirectBuy">
+                                   send <span class="priceBuy">-</span> ETH  to <code>0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0</code>
+                              </p>
+                          </div>
+
                   </div>
                 </div>
-              </div>
+
+
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ function unlockBrain() {
         document.app.wallet=wallet;
         document.app.wallet.provider=ethers.providers.getDefaultProvider("homestead");
         $('#directBuy').show();
+        $('#indirectBuy').hide();
         document.app.getInfo();
     });
 }
@@ -205,7 +206,7 @@ $(document).ready(function() {
       $('#cori_price').html((ethers.utils.formatEther(price)*100).toFixed(7))
       $('#numCoris').on('change',function() {
           if($('#numCoris').val()<0.01) $('#numCoris').val(0);
-          $('#priceBuy').html((ethers.utils.formatEther(price)*100*$('#numCoris').val()).toFixed(4));
+          $('.priceBuy').html((ethers.utils.formatEther(price)*100*$('#numCoris').val()).toFixed(4));
       })
       $('#buyCors').click(function() {
           $('#buyCors').attr('disabled','disabled');
