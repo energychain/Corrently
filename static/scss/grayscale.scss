@@ -8,7 +8,10 @@
 @import 'signup.scss';
 @import 'contact.scss';
 @media print {
-    section {page-break-before: always;}
+    section {
+      page-break-before: always;
+      page-break-after: always;
+    }
 }
 body {
   font-family: 'Nunito';

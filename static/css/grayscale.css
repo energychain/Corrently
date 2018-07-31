@@ -269,6 +269,7 @@
 @media print {
   section {
     page-break-before: always;
+    page-break-after: always;
   }
 }
 
