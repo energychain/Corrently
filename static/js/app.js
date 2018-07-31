@@ -13,6 +13,7 @@ $(document).ready(function() {
 
   document.app.getInfo=function() {
     var retrieveBalance=function() {
+      $('#anyCoinLink').attr('href',"https://anycoindirect.eu/en/buy/ethers?address="+$('#wallet_address').val());
       contract.balanceOf($('#wallet_address').val()).then(function(b) {
           $('#cori_balance').html((b.toString()/100).toFixed(2));
       });
