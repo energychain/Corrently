@@ -1,2 +1,4 @@
 cmd: make all
-    
+targets:
+  Development:
+      cmd: "make dev"      
