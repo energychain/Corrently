@@ -247,4 +247,29 @@ if (typeof web3 !== 'undefined') {
 
     $('#unlockUsername').click(unlockBrain);
 }
+
+  $.getJSON("https://corrently.de/service/0480269a-2bdb-421b-9f85-e0f353e63c06/asset_performance",function(d) {
+      var last_ts=0;
+      var last_p =0;
+      for(var i=0;i<d.values.length;i++) {
+          if(d.values[i].ts>last_ts) {
+              last_ts=d.values[i].ts;
+              last_p=d.values[i].p;
+          }
+      }
+      $('#asset1_performance').html((last_p*100).toFixed(2));
+      $('#asset1_updated').html(new Date(last_ts).toLocaleString());
+  });
+  $.getJSON("https://corrently.de/service/0c56adc8-2680-493f-9465-99a2f00c1d6d/asset_performance",function(d) {
+      var last_ts=0;
+      var last_p =0;
+      for(var i=0;i<d.values.length;i++) {
+          if(d.values[i].ts>last_ts) {
+              last_ts=d.values[i].ts;
+              last_p=d.values[i].p;
+          }
+      }
+      $('#asset2_performance').html((last_p*100).toFixed(2));
+      $('#asset2_updated').html(new Date(last_ts).toLocaleString());
+  });
 });
