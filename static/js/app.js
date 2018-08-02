@@ -1,7 +1,10 @@
 function unlockBrain() {
+  $('#retrieveBalance').attr('disabled','disabled');
+
   $('#login_frm').hide();
     document.app.provider=ethers.providers.getDefaultProvider("homestead");
     ethers.Wallet.fromBrainWallet($('#username').val(),$('#password').val()).then(function(wallet) {
+        $('#retrieveBalance').removeAttr('disabled');
         $('#wallet_address').val(wallet.address);
         console.log(wallet.address);
         document.app.wallet=wallet;
@@ -230,11 +233,15 @@ $(document).ready(function() {
       retrieveBalance();
     }
 }
-
+$('#btnWeb3').click(function() {
+  $('#login_frm').show();
+  $('#gotWeb3').hide();
+})
 
 
 if (typeof web3 !== 'undefined') {
       $('#login_frm').hide();
+      $('#gotWeb3').show();
       var web3Provider = new ethers.providers.Web3Provider(web3.currentProvider,ethers.providers.getDefaultProvider("homestead"));
       web3Provider.getBalance("0xc430fAB09288C272A321C086d330609CD8b71447"). then(function(balance) {
         document.app.provider=web3Provider;
@@ -244,7 +251,7 @@ if (typeof web3 !== 'undefined') {
 } else {
     document.app.provider=ethers.providers.getDefaultProvider("homestead");
     $('#login_frm').show();
-
+    $('#gotWeb3').hide();
     $('#unlockUsername').click(unlockBrain);
 }
 
