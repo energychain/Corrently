@@ -17,7 +17,7 @@ $(document).ready(function() {
 
   document.app.getInfo=function() {
     var retrieveBalance=function() {
-      $('#anyCoinLink').attr('href',"https://anycoindirect.eu/en/buy/ethers?address="+$('#wallet_address').val());
+      $('#anyCoinLink').attr('href',"https://anycoindirect.eu/en/buy/ethers?discref=cea54a6e-3bb6-4e29-8da1-66427467438f&address="+$('#wallet_address').val());
       contract.balanceOf($('#wallet_address').val()).then(function(b) {
           $('#cori_balance').html((b.toString()/100).toFixed(2));
       });
