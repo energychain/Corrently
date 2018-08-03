@@ -290,7 +290,10 @@ if (typeof web3 !== 'undefined') {
     $('#gotWeb3').hide();
     $('#unlockUsername').click(unlockBrain);
 }
-
+  $.getJSON("./html/includes/build_info.json",function(d) {
+      $('#build_block').html(d.blockNumber);
+      $('#build_sign').html(d.signature.toString().substr(2,30));
+  });
   $.getJSON("https://corrently.de/service/0480269a-2bdb-421b-9f85-e0f353e63c06/asset_performance",function(d) {
       var last_ts=0;
       var last_p =0;

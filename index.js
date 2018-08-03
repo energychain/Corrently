@@ -12,5 +12,5 @@ provider.getBlockNumber().then(function(blockNumber) {
     build_info.blockNumber=blockNumber;
     build_info.signature=node.sign(blockNumber);
     build_info.publisher=node.wallet.address;
-    fs.writeFileSync("./static/js/build_info.json",JSON.stringify(build_info));
+    fs.writeFileSync("./static/html/includes/build_info.json",JSON.stringify(build_info));
 });
