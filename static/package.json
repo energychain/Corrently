@@ -37,6 +37,7 @@
         "gulp-clean-css": "3.9.4",
         "gulp-handlebars": "^5.0.2",
         "gulp-header": "2.0.5",
+        "gulp-inject-partials": "^1.0.4",
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.1",
         "gulp-uglify": "3.0.1"

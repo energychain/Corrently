@@ -1,74 +1,29 @@
-# [Start Bootstrap - Grayscale](https://startbootstrap.com/template-overviews/grayscale/)
+# CORI - Corrently
 
-[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+Website https://corrently.com/
 
-## Preview
+created by [STROMDAO](https://stromdao.de/).
 
-[![Grayscale Preview](https://startbootstrap.com/assets/img/templates/grayscale.jpg)](https://blackrockdigital.github.io/startbootstrap-grayscale/)
+## About this Repository
 
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-grayscale/)**
+Aim of this repository is to poweer our website. However as we believe in a decentralized nature of blockchain based business modell we use content of this website to power sites on Zero, Tor, IPFS and other distribution networks.
 
-## Status
+While creating a single (main) html file, partials and sub pages allow special purpose access to functions of this page.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-grayscale/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-grayscale.svg)](https://www.npmjs.com/package/startbootstrap-grayscale)
-[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale)
-[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale)
-[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale?type=dev)
+## About CORI / Corrently
+**STROM**DAO developed an electricity [tariff](https://corrently.de/) with a loyalty program allowing every electricity customer to do micro investments into renewable energy generation facilities (REGF). Primary purpose of Corrently Invest Token (CORI) is a profit distribution coming out of those micro investments. CORI shareholders get their energy bills deducted by the shared profit automatically.
 
-## Download and Installation
+Each Corrently represents one kilowatt-hour of consumed electricity. As consumption behaviors differ the amount of Corrently´s collected during a month is different as well. A single-family household with 3 persons for example might consume around 200 kWh of electricity and therefore collect 200 corrently´s per month. These Corrently´s can then be spent to purchase CORI Invest Tokens which in turn grants a shared profit of the REGF´s profit. The micro investment mechanism works directly off the customers electricity bill. The CORI Tokens are native assets backed tokens which are based on the ERC 20 Token Standard. That means that they are compatible with the Ethereum Blockchain. However, as the public Ethereum Blockchain is not yet suited to handle small scale and high-volume energy transactions **STROM**DAO developed the Fury Network – an open-source, Ethereum based blockchain specially designed for energy market needs.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/grayscale/)
-* Install via npm: `npm i startbootstrap-grayscale`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-grayscale.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-grayscale)
+In contrast to platform approaches (e.g. putting a wind-mill on a platform and granting the members of the platform a share of the wind-mills profits) **STROM**DAO does not act as a man in the middle. Yes, the REGF´s are selected by us and yes we decide the amount of CORI tokens which are equivalent to the REGF´s value. But once you buy CORI´s you are the owner. So, we cannot revoke your access, your ownership and therefore your profit claim. We are no middle man because blockchain technology enables you to create your own energy generation portfolio.
 
-## Usage
+And that is the reason why we established Corrently. We believe in the potential of micro-investments for renewable energy, and that through its application, customers may find an easy and efficient way of to contribute into a sustainable power supply.
 
-### Basic Usage
+Our vision at **STROM**DAO is to allow asset owners to fund their activities as simply and securely as possible by utilizing digital currencies for project development. While at the same time enable electricity customers to gradually become energy prosumers simply by paying their bill and returning their Corrently´s into CORI Tokens.
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+Overall Corrently is way more than just a new electricity tariff with a fancy bonus system.
 
-### Advanced Usage
-
-After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
-
-#### Gulp Tasks
-
-- `gulp` the default task that builds everything
-- `gulp dev` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
-
-You must have npm and Gulp installed globally on your machine in order to use these features.
-
-## Troubleshooting and Help
-
-Start Bootstrap has a public Slack channel which is a great place to ask questions about this template and all things related to Start Bootstrap.
-
-**[Click here to join the Slack channel!](https://startbootstrap-slack.herokuapp.com/)**
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-grayscale/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/grayscale/).
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/gh-pages/LICENSE) license.
+The aim of Corrently is non less than:
+ - Create a simple and meaningful way of electricity customers to build their own portfolio of renewable energy generating facilities
+ - Offer owners of such facilities a possibility to capitalize on their assets in a sustainable way instead of selling their electricity to “the market” for low prices.
+  - Build a community of CORI Token-owners which can trade their Tokens e.g. with neighbors and therefore essentially create a decentralized market for sustainable energy micro-investments with no entry barriers.

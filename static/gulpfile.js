@@ -6,6 +6,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var injectPartials = require('gulp-inject-partials');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -94,11 +95,12 @@ gulp.task('js:minify', function() {
     .pipe(browserSync.stream());
 });
 
+
 // JS
 gulp.task('js', ['js:minify']);
 
 // Default task
-gulp.task('default', ['css', 'js', 'vendor']);
+gulp.task('default', ['css', 'js', 'vendor','partials']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -109,9 +111,20 @@ gulp.task('browserSync', function() {
   });
 });
 
+gulp.task('partials', function () {
+  return gulp.src([
+                './html/wallet.html',
+                './html/index.html'
+            ])
+           .pipe(injectPartials())
+           .pipe(gulp.dest('./'));
+});
+
+
 // Dev task
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js','partials', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
+  gulp.watch('./html/*.html', ['partials']);
   gulp.watch('./*.html', browserSync.reload);
 });
