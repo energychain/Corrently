@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Digial Asset Token secured by renewable electricity generation (capacity) issued by STROMDAO">
+    <meta name="description" content="ERC20 based Crypto Wallet for CORI Tokens (Corrently issued by STROMDAO)">
     <meta name="author" content="STROMDAO, Friedrichstraße 123, 10117 Berlin, Germany">
-    <meta name="keywords" content="Corrently, CORI, ERC20, Token, Renewables, Whitepaper">
+    <meta name="keywords" content="Corrently, CORI, ERC20, Token, Renewables, Wallet">
     <meta name="rights" content="STROMDAO Ltd">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://corrently.com/">
-    <meta name="twitter:title" content="Corrently - Invest Token - Whitepage">
-    <meta name="twitter:description" content="ERC20 based token issued for renewable energy assets in Germany">
+    <meta name="twitter:title" content="Corrently - Invest Token - Wallet">
+    <meta name="twitter:description" content="ERC20 Wallet for CORI Tokens">
     <meta property="og:title" content="Corrently - Invest Token - 0x725b190bc077ffde17cf549aa8ba25e298550b18">
   	<meta property="og:type" content="article">
   	<meta property="og:url" content="https://corrently.com/">
   	<meta property="og:site_name" content="Corrently">
-  	<meta property="og:description" content="ERC20 based digitalal asset token backed by green energy generation. Issued by STROMDAO">
+  	<meta property="og:description" content="ERC20 based Crypto Wallet for CORI Tokens (Corrently issued by STROMDAO)">
     <title>Corrently - Invest Token - 0x725b190bc077ffde17cf549aa8ba25e298550b18</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
       </div>
     </nav>
 
-    <!-- partial:_wallet.html -->
+    <!-- partial:sections/_wallet.html -->
     <section id="wallet" class="about-section text-left">
   <div class="container">
     <div class="row">
@@ -68,8 +68,13 @@
             </div>
             <div class="spacer"style="height:25px;"></div>
           </div>
-          <div id="gotWeb3" style="display:none">
-              <button id="btnWeb3" class="btn btn-default">Show Brain Wallet login</button>
+          <div id="gotWeb3" style="display:none;">
+            <div class="form-group">
+              <span class="switch switch-sm">
+                <input type="checkbox" class="switch" id="btnWeb3">
+                <label for="btnWeb3">Display brain wallet form</label>
+              </span>
+            </div>
               <div class="spacer"style="height:25px;"></div>
           </div>
           <form class="form-inline" onsubmit="return false;">
@@ -123,7 +128,8 @@
                                 </p>
                           </div>
                           <p class="card-text" id="indirectBuy">
-                               send <span class="priceBuy">-</span> ETH  to <code>0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0</code>
+                               transaction <span class="priceBuy">-</span> ETH  to <code>0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0</code><br/>
+                               <button class="btn btn-danger" id="buyWeb3" style="margin-top:5px;" onclick="web3Transfer">send <span class="priceBuy">-</span> ETH</button>
                           </p>
                       </div>
 
@@ -143,51 +149,30 @@
 
     <!-- partial -->
 
-    <section id="contact" class="about-section text-left">
-      <div class="container">
-        <div class="row">
-          <div class="col-sd-8 mx-auto">
-            <h1>Contact</h1>
-              <address>
-                <strong>STROM</strong>DAO Ltd<br/>
-                Friedrichstraße 123<br/>
-                10117 Berlin<br/>
-                Germany<br/>
-                Phone: <a href="tel:+493012084890">+49 30-12084890</a><br/>
-                Mail: <a href="mailto:kontakt@stromdao.de">kontakt@<strong>STROM</strong>DAO.de</a>
-              </address>
-          </div>
-          <div class="col-sd-4 mx-auto">
-            <h1>Registration</h1>
-            <strong>Company number: <a href="https://beta.companieshouse.gov.uk/company/10466125">10466125</a></strong>
-            <address>
-              120 High Road, East Finchley<br/>
-              N2 9ED<br/>
-              London<br/>
-              United Kingdom<br/>
-          </address>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
+    <!-- partial:includes/legal_footer.html -->
     <footer class="bg-black small text-center text-white-50">
-      <div class="container">
-        Copyright &copy; <strong>STROM</strong>DAO 2018
-      </div>
-    </footer>
+  <div class="container">
+    Copyright &copy; 2018 <strong>STROM</strong>DAO | 120 High Road, East Finchley, N2 9ED, London, United Kingdom | <a href="https://stromdao.de/impressum/"> Imprint</a> | Consensus #<span class="blockNumber"></span>
+  </div>
+</footer>
 
+    <!-- partial -->
+
+    <!-- partial:includes/js_footer.html -->
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
-    <script src="./js/ethers.min.js"></script>
-    <script src="./js/app.js"></script>
+<!-- Custom scripts for this template -->
+<script src="js/grayscale.min.js"></script>
+<script src="./js/ethers.min.js"></script>
+<script src="./js/app.js"></script>
+
+    <!-- partial -->
+
   </body>
 
 </html>

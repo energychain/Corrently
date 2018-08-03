@@ -10,9 +10,9 @@ var injectPartials = require('gulp-inject-partials');
 
 // Set the banner content
 var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
+  ' * Corrently - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
+  ' * Copyright 2018-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+  ' * Licensed under <%= pkg.license %>\n',
   ' */\n',
   ''
 ].join('');
@@ -126,5 +126,7 @@ gulp.task('dev', ['css', 'js','partials', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./html/*.html', ['partials']);
+  gulp.watch('./html/sections/*.html', ['partials']);
+  gulp.watch('./html/includes/*.html', ['partials']);
   gulp.watch('./*.html', browserSync.reload);
 });

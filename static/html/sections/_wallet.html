@@ -25,8 +25,13 @@
             </div>
             <div class="spacer"style="height:25px;"></div>
           </div>
-          <div id="gotWeb3" style="display:none">
-              <button id="btnWeb3" class="btn btn-default">Show Brain Wallet login</button>
+          <div id="gotWeb3" style="display:none;">
+            <div class="form-group">
+              <span class="switch switch-sm">
+                <input type="checkbox" class="switch" id="btnWeb3">
+                <label for="btnWeb3">Display brain wallet form</label>
+              </span>
+            </div>
               <div class="spacer"style="height:25px;"></div>
           </div>
           <form class="form-inline" onsubmit="return false;">
@@ -80,7 +85,8 @@
                                 </p>
                           </div>
                           <p class="card-text" id="indirectBuy">
-                               send <span class="priceBuy">-</span> ETH  to <code>0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0</code>
+                               transaction <span class="priceBuy">-</span> ETH  to <code>0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0</code><br/>
+                               <button class="btn btn-danger" id="buyWeb3" style="margin-top:5px;" onclick="web3Transfer">send <span class="priceBuy">-</span> ETH</button>
                           </p>
                       </div>
 

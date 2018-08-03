@@ -6,7 +6,7 @@ created by [STROMDAO](https://stromdao.de/).
 
 ## About this Repository
 
-Aim of this repository is to poweer our website. However as we believe in a decentralized nature of blockchain based business modell we use content of this website to power sites on Zero, Tor, IPFS and other distribution networks.
+Aim of this repository is to power our website. However as we believe in a decentralized nature of blockchain based business modell we use content of this website to power sites on Zero, Tor, IPFS and other distribution networks.
 
 While creating a single (main) html file, partials and sub pages allow special purpose access to functions of this page.
 

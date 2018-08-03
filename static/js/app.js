@@ -1,3 +1,13 @@
+function updatePossibility() {
+  var price = $('#cori_price').attr('data-price');
+  if(typeof price == "undefined") return;
+
+  var balance = $('#eth_balance').attr('data-balance');
+  balance-=153900000000000;
+  $('#numCoris').val(Math.floor((balance/price)*10000)/10000);
+
+  $('.priceBuy').html((ethers.utils.formatEther(price)*$('#numCoris').val()).toFixed(4));
+}
 function unlockBrain() {
   $('#retrieveBalance').attr('disabled','disabled');
 
@@ -15,6 +25,13 @@ function unlockBrain() {
     });
 }
 
+function web3Transfer() {
+  $('#buyWeb3').attr('disabled','disabled');
+
+  web3.eth.sendTransaction({from:web3.eth.coinbase, to:'0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0', value: web3.toWei(1, "ether")},function(x) {
+    $('#buyWeb3').removeAttr('disabled');
+  });
+}
 $(document).ready(function() {
   document.app= {};
 
@@ -29,6 +46,8 @@ $(document).ready(function() {
       });
       document.app.provider.getBalance($('#wallet_address').val()).then(function(balance) {
             $('#eth_balance').html((ethers.utils.formatEther(balance)*1).toFixed(7));
+            $('#eth_balance').attr('data-balance',balance);
+            updatePossibility();
       });
     }
 
@@ -207,10 +226,11 @@ $(document).ready(function() {
     }
     sale.price().then(function(price) {
       $('#cori_price').html((ethers.utils.formatEther(price)*100).toFixed(7))
+      $('#cori_price').attr('data-price',price*100);
       $('#numCoris').on('change',function() {
-          if($('#numCoris').val()<0.01) $('#numCoris').val(0);
           $('.priceBuy').html((ethers.utils.formatEther(price)*100*$('#numCoris').val()).toFixed(4));
       })
+
       $('#buyCors').click(function() {
           $('#buyCors').attr('disabled','disabled');
           var eths=($('#numCoris').val()*100)*price;
@@ -221,7 +241,22 @@ $(document).ready(function() {
           });
 
       })
+      updatePossibility();
     });
+    document.app.provider.getBlockNumber().then(function(blockNumber) {
+
+      sale.next_after().then(function(next_after)  {
+          sale.next_price().then(function(next_price)  {
+              console.log("next_price",next_price.toString());
+          });
+          console.log("next_after",next_after.toString());
+      });
+
+      $('.blockNumber').html(blockNumber);
+
+    });
+
+
     $('#retrieveBalance').click(retrieveBalance);
     if((typeof web3 != "undefined") && (typeof web3.eth != "undefined")) {
         if($('#wallet_address').val().length<42) {
@@ -232,6 +267,7 @@ $(document).ready(function() {
     if($('#wallet_address').val().length==42) {
       retrieveBalance();
     }
+
 }
 $('#btnWeb3').click(function() {
   $('#login_frm').show();
