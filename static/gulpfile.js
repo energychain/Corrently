@@ -113,6 +113,8 @@ gulp.task('browserSync', function() {
 
 gulp.task('partials', function () {
   return gulp.src([
+                './html/ledger_otc.html',
+                './html/ledger_cori.html',
                 './html/wallet.html',
                 './html/index.html'
             ])

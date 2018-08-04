@@ -40,10 +40,32 @@
       </div>
     </nav>
 
-    <!-- partial:sections/_ledger_cori.html -->
+    <!-- partial:sections/_ledger_otc.html -->
+    <section id="wallet" class="about-section text-left">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+          <h1>OTC Ledger</h1>
+          <table class="table" id="ledgerIt">
+            <tr><th>At</th><th>From</th><th>To</th><th>CORI</th></tr>
+          </table>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- partial -->
 
     <!-- partial:includes/legal_footer.html -->
+    <footer class="bg-black small text-center text-white-50">
+  <div class="container">
+    Copyright &copy; 2018 <strong>STROM</strong>DAO | 120 High Road, East Finchley, N2 9ED, London, United Kingdom | <a href="https://stromdao.de/impressum/"> Imprint</a> | Consensus #<span class="blockNumber"></span><br/>
+    <small>
+      Build #<span id="build_block"></span> -
+    <span id="build_sign"></span></small>
+  </div>
+</footer>
+
     <!-- partial -->
 
     <!-- Bootstrap core JavaScript -->
@@ -57,7 +79,7 @@
     <script src="js/grayscale.min.js"></script>
     <script src="./js/ethers.min.js"></script>
 
-    <script src="./js/ledgers.min.js"></script>
+    <script src="./js/ledgers.otc.js"></script>
   </body>
 
 </html>
