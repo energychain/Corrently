@@ -31,7 +31,7 @@ function app(kyc) {
   });
   //0xa050b90B0C60900E304774Eb39220dFB2C5fFf0F
   //0x61bdd888b3bd3f8466a4fb2e16435e917cd458a0
-  $.getJSON("http://api.etherscan.io/api?module=account&action=txlist&address="+$.qparam('a')+"&startblock=6000000&endblock=99999999&sort=asc&apikey=YourApiKeyToken",function(results) {
+  $.getJSON("https://api.etherscan.io/api?module=account&action=txlist&address="+$.qparam('a')+"&startblock=6000000&endblock=99999999&sort=asc&apikey=YourApiKeyToken",function(results) {
 
     results=results.result;
 
@@ -65,11 +65,9 @@ function app(kyc) {
         }
     }
     nextResult();
-
-
   });
 
-  $.getJSON("http://api.etherscan.io/api?module=account&action=txlistinternal&address="+$.qparam('a')+"&startblock=6000000&endblock=99999999&sort=asc&apikey=YourApiKeyToken",function(results) {
+  $.getJSON("https://api.etherscan.io/api?module=account&action=txlistinternal&address="+$.qparam('a')+"&startblock=6000000&endblock=99999999&sort=asc&apikey=YourApiKeyToken",function(results) {
     results=results.result;
 
     var cleaned=[];
