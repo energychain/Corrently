@@ -99,13 +99,17 @@ function app(kyc) {
         }
     }
     nextResult();
-
   });
 
 }
 $(document).ready(function() {
   $.getJSON("./data/kyc.json",function(kyc) {
-        app(kyc);
+    $.getJSON("/data/xchangerate.json",function(xrates) {
+          $.each(xrates,function(key,value) {
+                window.localStorage.setItem(key,value);
+          });
+          app(kyc);      
+    });
   })
 
 })
