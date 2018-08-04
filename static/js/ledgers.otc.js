@@ -176,7 +176,7 @@ function app(kyc) {
               asset_eths+=accurals;
               asset_eurs+=accurals*xrate_assets;
               asset_rows.push("<td>Accurals and Deferrals (SC)</td><td style='text-align:right'>"+((accurals*xrate_assets).toFixed(2))+"</td><td style='text-align:right' >"+((accurals).toFixed(4))+"</td>");
-              liability_rows.push("<th class='second'>Equity</th><th style='text-align:right' class='second'>"+(($('#balance').attr('data')*xrate_assets).toFixed(2))+"</th><th style='text-align:right' class='second'>"+(($('#balance').attr('data')*1).toFixed(4))+"</th>");
+              liability_rows.push("<th class='second'>Equity BC Account</th><th style='text-align:right' class='second'>"+(($('#balance').attr('data')*xrate_assets).toFixed(2))+"</th><th style='text-align:right' class='second'>"+(($('#balance').attr('data')*1).toFixed(4))+"</th>");
             }
 
             if(asset_eurs>liability_eurs) {
