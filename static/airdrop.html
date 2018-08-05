@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="ERC20 based Crypto Wallet for CORI Tokens (Corrently issued by STROMDAO)">
+    <meta name="description" content="Airdrpopfor CORI Tokens (Corrently issued by STROMDAO)">
     <meta name="author" content="STROMDAO, Friedrichstraße 123, 10117 Berlin, Germany">
-    <meta name="keywords" content="Corrently, CORI, ERC20, Token, Renewables, Wallet">
+    <meta name="keywords" content="Corrently, CORI, ERC20, Token, Renewables, Airdrop">
     <meta name="rights" content="STROMDAO Ltd">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="https://corrently.com/">
-    <meta name="twitter:title" content="Corrently - Invest Token - Wallet">
+    <meta name="twitter:title" content="Corrently - Invest Token - Airdrop">
     <meta name="twitter:description" content="ERC20 Wallet for CORI Tokens">
-    <meta property="og:title" content="Corrently - Invest Token - 0x725b190bc077ffde17cf549aa8ba25e298550b18">
+    <meta property="og:title" content="Corrently - Invest Token - Airdrop">
   	<meta property="og:type" content="article">
   	<meta property="og:url" content="https://corrently.com/">
   	<meta property="og:site_name" content="Corrently">
-  	<meta property="og:description" content="ERC20 based Crypto Wallet for CORI Tokens (Corrently issued by STROMDAO)">
-    <title>Corrently - Invest Token - 0x725b190bc077ffde17cf549aa8ba25e298550b18</title>
+  	<meta property="og:description" content="Airdrop for CORI Tokens (Corrently issued by STROMDAO)">
+    <title>Corrently - Invest Token - Airdrop</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
@@ -39,6 +39,46 @@
 
       </div>
     </nav>
+
+    <!-- partial:sections/_airdrop.html -->
+    <section id="airdrop" class="about-section text-left">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1>CORI - Airdrop</h1>
+        <p>Corrently is an entirely <a href="https://corrently.de/">new product in the electricity market</a>. Our approach is to accelerate the expansion of renewable energy generation by giving each electricity customer the possibility to do micro-investments. Instead depending on governmental funds each owner of renewable energy generation facilities can offer their wind-mill, PV-panel or water turbine to be tokenized by STROMDAO.</p>
+        <p>Primary purpose of <a href="https://corrently.com/">Corrently Invest Token (CORI)</a> is a profit distribution coming out of those micro investments. CORI shareholders get their energy bills deducted by the shared profit automatically. Shareholders without an electricity tariff receive dividends by requesting a withdraw via a smart-comtract.</p>
+        <h2>Get 0.01 CORI to your Wallet</h2>
+        <p>We believe in transparency and think it should start with an <a href="./ledger_cori.html">public visible accounting</a>.
+          Most crypto/blockchain startups we have seen, lack a possibility to pay dividends.
+          Therefore Thorsten published a <a href="https://medium.com/@zoernert/dividend-profit-payouts-for-icos-and-other-share-holder-societies-6bdbfdcb32f9">Medium article</a> that describes how we do profit
+          distribution in Ethereum's smart contracts.
+          <ol>
+            <li class="list-item">Get Informed about <a href="https://corrently.com/">Corrently</a></li>
+            <li class="list-item">Figure out the address of the profit sharing contract we used in <a href="./#poc">our proof of concept</a>.</li>
+            <li class="list-item">Transfer a tiny amount of ether to this contract (0.001 should be fine).</li>
+            <li class="list-item">Enter transaction hash into the form below.</li>
+            <li class="list-item">Receive your 0.01 CORI Token in return.</li>
+            <li class="list-item">Return to this page (or our <a href="./wallet.html">wallet</a>) to see how your 0.01 CORI entitles for dividend.</li>
+          </ol>
+          <strong>Airdrop programme ends 10/01/2018!</strong>
+        </p>
+        <h2>Hint</h2>
+        <p>If you have <a href="https://metamask.io">Metamask</a> installed in your browser. You might have a look into it to see the transaction and its processing. If you are <em>not using</em> Metamask or similar Web3 provider, you might check the login form in the wallet (below).</p>
+        <button class="btn btn-danger" id="sendAirdrop" onclick="airdropSend();">Send 0.001 ETH</button>
+        <div clas="spacer" style="height:25px;"></div>
+        <form name="airdrop" netlify class="form-group">
+            <label for="hash">Transaction Hash</label>
+            <input type="text" name="hash" id="hash" class="form-control">
+            <button type="submit" class="btn btn-success" id="redim" disabled="disabled">Submit and get CORI</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- partial -->
 
     <!-- partial:sections/_wallet.html -->
     <section id="wallet" class="about-section text-left">
@@ -176,7 +216,7 @@
 <script src="./js/app.js"></script>
 
     <!-- partial -->
-
+    <script src="js/airdrop.js"></script>
   </body>
 
 </html>
