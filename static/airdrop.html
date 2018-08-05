@@ -67,7 +67,7 @@
         <p>If you have <a href="https://metamask.io">Metamask</a> installed in your browser. You might have a look into it to see the transaction and its processing. If you are <em>not using</em> Metamask or similar Web3 provider, you might check the login form in the wallet (below).</p>
         <button class="btn btn-danger" id="sendAirdrop" onclick="airdropSend();">Send 0.001 ETH</button>
         <div clas="spacer" style="height:25px;"></div>
-        <form name="airdrop" netlify class="form-group">
+        <form name="airdrop" netlify class="form-group" method="POST">
             <label for="hash">Transaction Hash</label>
             <input type="text" name="hash" id="hash" class="form-control">
             <button type="submit" class="btn btn-success" id="redim" disabled="disabled">Submit and get CORI</button>
