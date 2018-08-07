@@ -117,6 +117,7 @@ gulp.task('partials', function () {
                 './html/ledger_cori.html',
                 './html/wallet.html',
                 './html/airdrop.html',
+                './html/summary.html',
                 './html/index.html'
             ])
            .pipe(injectPartials())
