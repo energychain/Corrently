@@ -42,7 +42,7 @@ $(document).ready(function() {
           $('#cori_balance').html((b.toString()/100).toFixed(2));
       });
       exd.balanceOf($('#wallet_address').val()).then(function(b) {
-          $('#cori_dividend').html((ethers.utils.formatEther(b)*1).toFixed(7));
+          $('#cori_dividend').html((ethers.utils.formatEther(b)*1).toFixed(6));
       });
       document.app.provider.getBalance($('#wallet_address').val()).then(function(balance) {
             $('#eth_balance').html((ethers.utils.formatEther(balance)*1).toFixed(7));
