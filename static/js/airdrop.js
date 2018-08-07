@@ -1,4 +1,5 @@
 function airdropSend() {
+    _paq.push(['trackEvent', 'web3', 'wallet', 'transfer']);
     if($('#wallet_address').val().length!=42) {
         alert("Please use the login form (brain wallet) or a Web3 Provider to login");
     } else {
@@ -20,5 +21,6 @@ function airdropSend() {
 
 
 $('#wallet_address').on('change',function() {
+    _paq.push(['trackEvent', 'web3', 'wallet', 'change']);
     $('#sendAirdrop').removeAttr('disabled');
 });
