@@ -294,7 +294,7 @@ if (typeof web3 !== 'undefined') {
       $('#build_block').html(d.blockNumber);
       $('#build_sign').html(d.signature.toString().substr(2,30));
   });
-  $.getJSON("https://corrently.de/service/0480269a-2bdb-421b-9f85-e0f353e63c06/asset_performance",function(d) {
+  $.getJSON("https://corrently.de/static/asset_0480269a2bdb421b9f85e0f353e63c06.json",function(d) {
       var last_ts=0;
       var last_p =0;
       for(var i=0;i<d.values.length;i++) {
@@ -306,7 +306,7 @@ if (typeof web3 !== 'undefined') {
       $('#asset1_performance').html((last_p*100).toFixed(2));
       $('#asset1_updated').html(new Date(last_ts).toLocaleString());
   });
-  $.getJSON("https://corrently.de/service/0c56adc8-2680-493f-9465-99a2f00c1d6d/asset_performance",function(d) {
+  $.getJSON("https://corrently.de/static/asset_0c56adc82680493f946599a2f00c1d6d.json",function(d) {
       var last_ts=0;
       var last_p =0;
       for(var i=0;i<d.values.length;i++) {
