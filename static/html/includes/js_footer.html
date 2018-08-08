@@ -19,8 +19,10 @@
   })();
 </script>
 <script>
-$(document).ready(function(e) {
-    console.log(e.currentTarget.id);
-      _paq.push(['trackEvent', 'wp', e.currentTarget.id, 'section']);
+$(document).ready(function() {
+      $('section').on('appear',function(e) {
+        console.log(e.currentTarget.id);
+        _paq.push(['trackEvent', 'wp', e.currentTarget.id, 'section']);
+      });
   });
 </script>
