@@ -71,7 +71,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead">
+    <header class="masthead" data-track-content data-content-name="Masthead">
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto">
           <h1 class="mx-auto my-0 text-uppercase"><strong>CORI</strong> Corrently Invest Token</h1>
@@ -85,7 +85,7 @@ We aim to empower individuals to create value by consuming green energy</h3>
         </div>
       </div>
     </header>
-
+    <div data-track-content data-content-name="Summary">
     <!-- partial:sections/_summary.html -->
     <section id="abstract" class="about-section text-left">
   <div class="container">
@@ -112,7 +112,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+    </div>
+    <div data-track-content data-content-name="Intro">
     <!-- partial:sections/_intro.html -->
     <section id="intro" class="about-section text-left">
   <div class="container">
@@ -153,7 +154,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+    </div>
+    <div data-track-content data-content-name="Company">
     <!-- partial:sections/_company.html -->
     <section id="company" class="about-section text-left">
   <div class="container">
@@ -209,7 +211,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="BCECO">
     <!-- partial:sections/_bceco.html -->
     <section id="blockchainEco" class="about-section text-left">
   <div class="container">
@@ -252,7 +255,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Cori-Token">
     <!-- partial:sections/_coritoken.html -->
     <section id="about" class="about-section text-left">
   <div class="container">
@@ -294,7 +298,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Terms">
     <!-- partial:sections/_terms.html -->
     <img src="img/handshake.png" class="img-fluid" alt="">
 <section id="terms" class="about-section text-left">
@@ -354,7 +359,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="PoC">
     <!-- partial:sections/_poc.html -->
     <img src="img/poc.png" class="img-fluid" alt="" style="width:100%">
 <section id="poc" class="about-section text-left">
@@ -393,7 +399,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Assets">
     <!-- partial:sections/_assets.html -->
     <img src="img/assets.png" class="img-fluid" alt="">
 <section id="assets" class="about-section text-left">
@@ -439,7 +446,8 @@ We aim to empower individuals to create value by consuming green energy</h3>
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Join">
     <!-- partial:sections/_join.html -->
     <img src="img/participate.png" class="img-fluid" alt="">
 <section id="join" class="about-section text-left">
@@ -488,7 +496,8 @@ For optimization tariff customers receive payouts from within a single, aggregat
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Wallet">
     <!-- partial:sections/_wallet.html -->
     <section id="wallet" class="about-section text-left">
   <div class="container">
@@ -634,7 +643,8 @@ For optimization tariff customers receive payouts from within a single, aggregat
 </section>
 
     <!-- partial -->
-
+  </div>
+  <div data-track-content data-content-name="Contract">
     <!-- partial:sections/_contact.html -->
     <img src="img/contact.png" class="img-fluid" alt="" style="width:100%">
     <section id="contact" class="about-section text-left">
@@ -668,7 +678,7 @@ For optimization tariff customers receive payouts from within a single, aggregat
     </section>
 
     <!-- partial -->
-
+  </div>
 
     <!-- partial:includes/legal_footer.html -->
     <footer class="bg-black small text-center text-white-50">
@@ -699,6 +709,7 @@ For optimization tariff customers receive payouts from within a single, aggregat
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
+   _paq.push(['trackVisibleContentImpressions']);
   (function() {
     var u="//corrently.de/session/";
     _paq.push(['setTrackerUrl', u+'piwik.php']);
@@ -706,14 +717,6 @@ For optimization tariff customers receive payouts from within a single, aggregat
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
-</script>
-<script>
-$(document).ready(function() {
-      $('section').on('appear',function(e) {
-        console.log(e.currentTarget.id);
-        _paq.push(['trackEvent', 'wp', e.currentTarget.id, 'section']);
-      });
-  });
 </script>
 
     <!-- partial -->
