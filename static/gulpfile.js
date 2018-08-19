@@ -116,6 +116,7 @@ gulp.task('partials', function () {
                 './html/ledger_otc.html',
                 './html/dapp_dd.html',
                 './html/ledger_cori.html',
+                './html/investor.html',
                 './html/wallet.html',
                 './html/airdrop.html',
                 './html/summary.html',
