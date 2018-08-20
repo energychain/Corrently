@@ -117,6 +117,7 @@ gulp.task('partials', function () {
                 './html/dapp_dd.html',
                 './html/ledger_cori.html',
                 './html/investor.html',
+                './html/brazil.html',                
                 './html/wallet.html',
                 './html/airdrop.html',
                 './html/summary.html',
