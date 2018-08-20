@@ -134,20 +134,27 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <h1>About CORI - Airdrop</h1>
-        <p>Corrently is an entirely <a href="https://corrently.de/">new product in the electricity market</a>. Our approach is to accelerate the expansion of renewable energy generation by giving each electricity customer the possibility to do micro-investments. Instead depending on governmental funds each owner of renewable energy generation facilities can offer their wind-mill, PV-panel or water turbine to be tokenized by STROMDAO.</p>
-        <p>Our Airdrop seperates into two independent offerings: One Corrently Corp. Share and/or Corrently Invest Token (CORI)
-       </p>
-        <a href="https://korporatio.com/Corrently/#/" target="_blank"><img src="img/certificate_of_incorporation.png" class="img img-fluid" alt="Company number 206389 - Registrar of International Business Companies Seychelles"></a>
+        <p>Corrently is an entirely <a href="https://corrently.de/">new product in the electricity market</a>. Our approach is to accelerate the expansion of renewable energy generation by giving each electricity customer the possibility to do micro-investments. Instead depending on governmental funds each owner of renewable energy generation facilities can offer their wind-mill, PV-panel or water turbine to be tokenized by STROMDAO.</p>        
         <h2>Get 1 Share of Corrently Corp</h2>
           <p>Corrently Corp got incorporated at the Republic of Seychelles. Primary purpose of Corrently Corp is to marked (issue) new Corrently Invest tokens.</p>
           <p>We give you 1 of 100.000 shares if you:
             <ol>
-              <li><a href="https://korporatio.com/Corrently/#/">Apply for Membership</a> (requires Metamask or similar to submit, fulfillment by <a href="https://korporatio.com/">Korporatio</a> marked leader for real companies on the blockchain )</li>
+              <li>Get whitelisted using the form below (Fulfillment by <a href="https://korporatio.com/Corrently/#/">Korporatio</a> marked leader for real companies on the blockchain )</li>
               <li>Confirm KYC compliance we send you by mail (Know-Your-Customer)</li>
-              <li><a href="http://www.paywithapost.de/pay?id=883e5d3e-5689-4084-ba81-a9113291dfd4">Send a tweet / share a message</a></li>
+              <li><a href="http://www.paywithapost.de/pay?id=883e5d3e-5689-4084-ba81-a9113291dfd4">Share a message on Facebook, Twitter, Linkedin etc...</a></li>
               <li>You receive 1 share to your wallet.</li>
             </ol>
           </p>
+          <form name="airdrop" netlify class="form-group" method="POST">
+              <label for="firstname">Firstname</label>
+              <input type="text" name="firstname" id="firstname" class="form-control">
+              <label for="lastname">Lastname</label>
+              <input type="text" name="lastname" id="lastname" class="form-control">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" class="form-control">
+              <button type="submit" class="btn btn-success" id="redim" disabled="disabled">Request to be whitelisted</button>
+          </form>
+          <hr/>
         <h2>Renewable Energy Invest - Corrently Invest Token</h2>
         <p>Primary purpose of <a href="https://corrently.com/">Corrently Invest Token (CORI)</a> is a profit distribution coming out of those micro investments. CORI shareholders get their energy bills deducted by the shared profit automatically. Shareholders without an electricity tariff receive dividends by requesting a withdraw via a smart-comtract.</p>
         <p>We believe in transparency and think it should start with an <a href="./ledger_cori.html">public visible accounting</a>.
@@ -170,16 +177,11 @@
         <p>If you have <a href="https://metamask.io">Metamask</a> installed in your browser. You might have a look into it to see the transaction and its processing. If you are <em>not using</em> Metamask or similar Web3 provider, you might check the login form in the wallet (below). And... If you use the red button below - we will try to do everything automatically for you... (not recommended).</p>
         <button class="btn btn-danger" id="sendAirdrop" onclick="airdropSend();">Invest 0.001 ETH</button>
         <div clas="spacer" style="height:25px;"></div>
-        <form name="airdrop" netlify class="form-group" method="POST">
-            <label for="hash">Transaction Hash</label>
-            <input type="text" name="hash" id="hash" class="form-control">
-            <button type="submit" class="btn btn-success" id="redim" disabled="disabled">Submit and get CORI</button>
-        </form>
       </div>
       <div class="col-lg-4 mx-auto">
+            <a href="https://korporatio.com/Corrently/#/" target="_blank"><img src="img/certificate_of_incorporation.png" class="img img-fluid" alt="Company number 206389 - Registrar of International Business Companies Seychelles"></a>
             <h3><a href="./brazil.html">Blockchain - Ordem e Progresso</a></h3>
             <a href="./summary.html"><img src="./img/cori_process_small.png" class="img-fluid img-responsive"/></a>
-            <div data-vl-widget="embedForm"></div>
             <script async="async" id="button_883e5d3e-5689-4084-ba81-a9113291dfd4" src="//www.paywithatweet.com/embeds/883e5d3e-5689-4084-ba81-a9113291dfd4" charset="utf-8"></script>
             <a href="#airdrop" class="btn btn-danger js-scroll-trigger" onclick="airdropSend();">Invest starts with 0.001 ETH</a>
 
