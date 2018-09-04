@@ -1,4 +1,0 @@
-This is a Brave Payments publisher verification file.
-
-Domain: corrently.com
-Token: b8fce59332b08a585ba3c93c046db3cf03bf6fef6d00335477ffa82fc90d11ed
