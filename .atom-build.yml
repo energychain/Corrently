@@ -1,4 +1,6 @@
 cmd: make all
 targets:
   Development:
-      cmd: "make dev"      
+      cmd: "make dev"
+  Freshen:
+      cmd: "make update"  

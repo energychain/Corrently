@@ -25,7 +25,8 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "cd static && gulp dev",
-		"publish": "cd static && gulp"
+		"publish": "cd static && gulp",
+		"freshen": "cd static && gulp collect"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "5.2.0",
