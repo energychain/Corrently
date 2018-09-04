@@ -7,6 +7,7 @@ var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
 var injectPartials = require('gulp-inject-partials');
+var r2 = require("r2");
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -100,7 +101,7 @@ gulp.task('js:minify', function() {
 gulp.task('js', ['js:minify']);
 
 // Default task
-gulp.task('default', ['css', 'js', 'vendor','partials']);
+gulp.task('default', ['collect','css', 'js', 'vendor','partials']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -117,7 +118,7 @@ gulp.task('partials', function () {
                 './html/dapp_dd.html',
                 './html/ledger_cori.html',
                 './html/investor.html',
-                './html/brazil.html',                
+                './html/brazil.html',
                 './html/wallet.html',
                 './html/airdrop.html',
                 './html/summary.html',
@@ -127,9 +128,16 @@ gulp.task('partials', function () {
            .pipe(gulp.dest('./'));
 });
 
+gulp.task('collect',async function() {
+  const fs = require("fs");
+  let response = await r2("https://corrently.de/static/asset_0480269a2bdb421b9f85e0f353e63c06.json").json;
+  fs.writeFileSync("data/asset_0480269a2bdb421b9f85e0f353e63c06.json",JSON.stringify(response));
+  response = await r2("https://corrently.de/static/asset_0c56adc82680493f946599a2f00c1d6d.json").json;
+  fs.writeFileSync("data/asset_0c56adc82680493f946599a2f00c1d6d.json",JSON.stringify(response));
+});
 
 // Dev task
-gulp.task('dev', ['css', 'js','partials', 'browserSync'], function() {
+gulp.task('dev', ['collect','css', 'js','partials', 'browserSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./html/*.html', ['partials']);
